@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_device_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ixp.devicemonitor.DeviceManagerActivity">
+
+    <!--<com.ixp.devicemonitor.AdView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:id="@+id/top_ad"/>-->
+
+    <!--<com.ixp.devicemonitor.AdView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:id="@+id/botton_ad"/>-->
+
+    <include android:id="@+id/top_ad"
+        layout="@layout/layout_top"/>
+
+    <include layout="@layout/layout_bottom"
+        android:id="@+id/bottom_lay"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/top_ad"
+        android:layout_above="@id/bottom_lay"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                style="@style/detail_text_left"
+                android:text="@string/device_detail_name"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/add_device_name"
+                android:maxLines="1"
+                style="@style/detail_text_right"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                style="@style/detail_text_left"
+                android:text="@string/device_detail_id"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/add_device_id"
+                style="@style/detail_text_right"
+                android:maxLines="1"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/add_device"
+            android:textSize="18sp"
+            android:text="@string/add_device"/>
+
+    </LinearLayout>
+</RelativeLayout>

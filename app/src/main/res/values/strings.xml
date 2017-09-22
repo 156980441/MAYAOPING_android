@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">DeviceMonitor</string>
+    <string name="title_activity_login">登陆</string>
+    <string name="title_activity_register">注册</string>
+    <string name="title_activity_device">设备列表</string>
+    <string name="title_activity_device_manager">设备管理</string>
+    <string name="title_activity_device_info">设备信息</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">用户名</string>
+    <string name="prompt_password">密码</string>
+    <string name="prompt_password_re">确认密码</string>
+    <string name="action_sign_in">登陆</string>
+    <string name="action_register">注册</string>
+    <string name="action_sign_in_short">登陆</string>
+    <string name="error_invalid_username">错误的用户名或密码</string>
+    <string name="error_invalid_password">密码太短</string>
+    <string name="error_incorrect_password">密码错误</string>
+    <string name="error_field_required">必填区域</string>
+    <string name="add_device">添加设备</string>
+    <string name="device_detail_name">设备名称:</string>
+    <string name="device_detail_id">设备ID:</string>
+    <string name="device_detail_temperature">温度:</string>
+    <string name="device_detail_tds">TDS:</string>
+    <string name="device_detail_ph">PH:</string>
+    <string name="device_detail_state">设备状态:</string>
+    <string name="device_update_date">更新时间:</string>
+    <string name="open_device">打开设备</string>
+    <string name="close_device">关闭设备</string>
+
+    <string name="network_ssid">网络SSID:</string>
+    <string name="network_password">网络密码:</string>
+    <string name="server_address">服务器地址:</string>
+    <string name="server_port">服务器端口:</string>
+    <string name="machine_id">设备ID:</string>
+    <string name="ph_cofa">PH因子A:</string>
+    <string name="ph_cofb">PH因子B:</string>
+    <string name="tds_cofa">TDS因子A:</string>
+    <string name="tds_cofb">TDS因子B:</string>
+
+    <string name="set_params">设置参数</string>
+    <string name="read_params">读取参数</string>
+    <string name="settings">设置</string>
+</resources>
