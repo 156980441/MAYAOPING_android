@@ -44,10 +44,10 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="GCRQkbSbGSSHWF7MlBGlz4pdMS0Q75j3" /> <!-- http://lbsyun.baidu.com/apiconsole/key -->
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -69,7 +69,7 @@
         <activity android:name=".WebActivity" />
         <activity android:name=".MachineSettingActivity"
             android:label="设置设备参数"
-            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|stateHidden"></activity>
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden|stateHidden" />
     </application>
 
 </manifest>
