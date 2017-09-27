@@ -76,6 +76,7 @@
             android:label="设置设备参数"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden|stateHidden" />
         <activity android:name=".PasswordSettingActivity" />
+        <activity android:name=".ForumActivity"></activity>
     </application>
 
 </manifest>

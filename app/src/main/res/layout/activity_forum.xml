@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_device"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ixp.devicemonitor.ForumActivity">
+
+    <include
+        android:id="@+id/top_ad"
+        layout="@layout/layout_top" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/add_device"
+        android:layout_below="@+id/top_ad"
+        android:layout_weight="1000"></ListView>
+
+    <include
+        android:id="@+id/bottom_lay"
+        layout="@layout/layout_bottom" />
+
+    <RadioGroup
+        android:id="@+id/tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/devices"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/task"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="8dp"
+            android:text="@string/devices"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/forum"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/fav"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="8dp"
+            android:text="@string/forum"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/track"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="8dp"
+            android:text="@string/mine"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+
+    <!--<Button-->
+    <!--android:id="@+id/add_device"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_above="@id/bottom_lay"-->
+    <!--android:text="@string/add_device" />-->
+
+
+</LinearLayout>

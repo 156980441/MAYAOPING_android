@@ -108,13 +108,13 @@ public class DeviceActivity extends AppCompatActivity {
                         Toast.makeText(DeviceActivity.this, RB1.getText()+"被选择", Toast.LENGTH_LONG).show();
                     }
                     else if(checkedId==RB1.getId()){
-                        Toast.makeText(DeviceActivity.this, RB2.getText()+"被选择", Toast.LENGTH_LONG).show();
+                        myintent.setClass(DeviceActivity.this, ForumActivity.class);
                     }
                     else if(checkedId==RB3.getId()){
                         myintent.setClass(DeviceActivity.this, MineActivity.class);
-                        DeviceActivity.this.startActivity(myintent);
-                        DeviceActivity.this.finish();
                     }
+                    DeviceActivity.this.startActivity(myintent);
+                    DeviceActivity.this.finish();
                 }
             };
 
