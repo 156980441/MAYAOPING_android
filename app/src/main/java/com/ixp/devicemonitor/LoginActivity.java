@@ -55,8 +55,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         // Set up the login form.
         mUsernameView = (EditText) findViewById(R.id.username);
-
         mPasswordView = (EditText) findViewById(R.id.password);
+
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -101,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_settings:
                 startSettingActivity();
-                return  true;
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

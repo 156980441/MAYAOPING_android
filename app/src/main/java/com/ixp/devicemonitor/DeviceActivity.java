@@ -104,13 +104,13 @@ public class DeviceActivity extends AppCompatActivity {
                     Intent myintent = new Intent();
 
                     // TODO Auto-generated method stub
-                    if(checkedId==RB1.getId()&& RB1.isChecked()){
+                    if(checkedId==RB1.getId()){
                         Toast.makeText(DeviceActivity.this, RB1.getText()+"被选择", Toast.LENGTH_LONG).show();
                     }
-                    else if(checkedId==RB1.getId()&& RB2.isChecked()){
+                    else if(checkedId==RB1.getId()){
                         Toast.makeText(DeviceActivity.this, RB2.getText()+"被选择", Toast.LENGTH_LONG).show();
                     }
-                    else if(checkedId==RB3.getId()&& RB3.isChecked()){
+                    else if(checkedId==RB3.getId()){
                         myintent.setClass(DeviceActivity.this, MineActivity.class);
                         DeviceActivity.this.startActivity(myintent);
                         DeviceActivity.this.finish();
