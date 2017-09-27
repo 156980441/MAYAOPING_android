@@ -15,6 +15,8 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.ixp.util.AdItem;
 import com.ixp.util.AdManager;
@@ -34,6 +36,8 @@ public class DeviceActivity extends AppCompatActivity {
     private AdView mBottomAdView;
     private ListView mListView;
     private BaseAdapter mListAdapter;
+    private RadioGroup RG;
+    private RadioButton RB1, RB2, RB3, RB4, RB5, RB6;
 
     private ArrayList<AdItem> mTopAdItems;
     private ArrayList<AdItem> mBottomAdItems;
@@ -90,10 +94,42 @@ public class DeviceActivity extends AppCompatActivity {
         }
     }
 
+    private RadioGroup.OnCheckedChangeListener ChangeRadioGroup = new
+            RadioGroup.OnCheckedChangeListener()
+            {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId)
+                {
+
+                    Intent myintent = new Intent();
+
+                    // TODO Auto-generated method stub
+                    if(checkedId==RB1.getId()&& RB1.isChecked()){
+                        Toast.makeText(DeviceActivity.this, RB1.getText()+"被选择", Toast.LENGTH_LONG).show();
+                    }
+                    else if(checkedId==RB1.getId()&& RB2.isChecked()){
+                        Toast.makeText(DeviceActivity.this, RB2.getText()+"被选择", Toast.LENGTH_LONG).show();
+                    }
+                    else if(checkedId==RB3.getId()&& RB3.isChecked()){
+                        myintent.setClass(DeviceActivity.this, MineActivity.class);
+                        DeviceActivity.this.startActivity(myintent);
+                        DeviceActivity.this.finish();
+                    }
+                }
+            };
+
     private void initView() {
         mTopAdView = (AdView) findViewById(R.id.top_ad);
         mBottomAdView = (AdView) findViewById(R.id.botton_ad);
         mListView = (ListView) findViewById(R.id.list);
+
+        RG = (RadioGroup) findViewById(R.id.tabbar);
+        RB1 = (RadioButton) findViewById(R.id.devices);
+        RB2 = (RadioButton) findViewById(R.id.forum);
+        RB3 = (RadioButton) findViewById(R.id.mine);
+
+        RG.setOnCheckedChangeListener(ChangeRadioGroup);
+
 
         mTopAdView.hideCloseButton();
         mTopAdView.setAdAdapter(new AdView.AdAdapter() {
@@ -134,12 +170,12 @@ public class DeviceActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.add_device).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openAddDeviceActivity();
-            }
-        });
+//        findViewById(R.id.add_device).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openAddDeviceActivity();
+//            }
+//        });
 
         mListAdapter = new MyListAdapter(getLayoutInflater());
         mListView.setAdapter(mListAdapter);
@@ -272,10 +308,10 @@ public class DeviceActivity extends AppCompatActivity {
                         finish();
                     }
                 }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
         });
         builder.create().show();
     }
