@@ -6,6 +6,8 @@
     <string name="title_activity_device_manager">设备管理</string>
     <string name="title_activity_device_info">设备信息</string>
     <string name="title_activity_mine">我的</string>
+    <string name="title_activity_forum">论坛</string>
+    <string name="title_activity_pass">密码</string>
 
     <!-- Strings related to login -->
     <string name="prompt_username">用户名</string>
@@ -43,7 +45,7 @@
     <string name="read_params">读取参数</string>
     <string name="settings">设置</string>
 
-    <string name="devices">设备</string>
-    <string name="forum">论坛</string>
-    <string name="mine">我的</string>
+    <string name="tabbar_devices">设备</string>
+    <string name="tabbar_forum">论坛</string>
+    <string name="tabbar_mine">我的</string>
 </resources>

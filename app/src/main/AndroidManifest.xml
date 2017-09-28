@@ -66,15 +66,21 @@
         <activity
             android:name=".DeviceManagerActivity"
             android:label="@string/title_activity_device_manager" />
+        <activity android:name=".DevicesActivity"
+            android:label="@string/title_activity_device"/>
+        <activity
+            android:name=".ForumActivity"
+            android:label="@string/title_activity_forum" />
         <activity android:name=".WebActivity" />
         <activity
             android:name=".MachineSettingActivity"
             android:label="设置设备参数"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden|stateHidden" />
-        <activity android:name=".PasswordSettingActivity" />
-        <activity android:name=".ForumActivity" />
-        <activity android:name=".BaseActivity"/>
-        <activity android:name=".DevicesActivity"></activity>
+        <activity android:name=".PasswordSettingActivity"
+            android:label="@string/title_activity_pass"/>
+
+        <activity android:name=".BaseActivity" />
+
     </application>
 
 </manifest>
