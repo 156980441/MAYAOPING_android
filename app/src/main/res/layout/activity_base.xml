@@ -35,7 +35,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:button="@null"
-            android:checked="true"
             android:drawableTop="@drawable/task"
             android:gravity="center"
             android:paddingBottom="5dp"

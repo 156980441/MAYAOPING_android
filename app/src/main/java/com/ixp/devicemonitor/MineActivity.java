@@ -1,13 +1,14 @@
 package com.ixp.devicemonitor;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 public class MineActivity extends BaseActivity {
@@ -31,18 +32,52 @@ public class MineActivity extends BaseActivity {
                 Intent intent = new Intent();
                 if (position == 0) {
                     intent.setClass(MineActivity.this, DeviceManagerActivity.class);
+                    startActivity(intent);
                 } else if (position == 1) {
                     intent.setClass(MineActivity.this, MachineSettingActivity.class);
+                    startActivity(intent);
                 } else if (position == 2) {
                     intent.setClass(MineActivity.this, PasswordSettingActivity.class);
+                    startActivity(intent);
                 } else if (position == 3) {
+
+                    final AlertDialog.Builder normalDialog = new AlertDialog.Builder(MineActivity.this);
+                    normalDialog.setTitle("用户注销");
+                    normalDialog.setMessage("你确定要注销用户吗？");
+                    normalDialog.setPositiveButton("注销",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent myIntent = new Intent();
+                                    myIntent.setClass(MineActivity.this, LoginActivity.class);
+                                    MineActivity.this.startActivity(myIntent);
+                                    MineActivity.this.finish();
+                                }
+                            });
+                    normalDialog.setNegativeButton("取消",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    //...To-do
+                                }
+                            });
+                    normalDialog.show();
 
                 } else if (position == 4) {
 
-                } else if (position == 5) {
+                    final AlertDialog.Builder normalDialog = new AlertDialog.Builder(MineActivity.this);
+                    normalDialog.setTitle("版本");
+                    normalDialog.setMessage("1.0");
+                    normalDialog.setPositiveButton("确定",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    //...To-do
+                                }
+                            });
+                    normalDialog.show();
 
                 }
-                startActivity(intent);
             }
         });
     }
