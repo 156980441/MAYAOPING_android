@@ -9,7 +9,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.text.AutoText;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -131,7 +130,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void loginSuccess() {
         Intent intent = new Intent();
-        intent.setClass(LoginActivity.this, DeviceActivity.class);
+        intent.setClass(LoginActivity.this, DevicesActivity.class);
         startActivity(intent);
     }
 

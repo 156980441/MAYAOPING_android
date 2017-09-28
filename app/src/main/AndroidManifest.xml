@@ -45,19 +45,15 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="GCRQkbSbGSSHWF7MlBGlz4pdMS0Q75j3" /> <!-- http://lbsyun.baidu.com/apiconsole/key -->
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity
-            android:name=".DeviceActivity"
-            android:label="@string/title_activity_device" />
         <activity
             android:name=".DeviceDetailActivity"
             android:label="@string/title_activity_device_info" />
@@ -76,7 +72,9 @@
             android:label="设置设备参数"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden|stateHidden" />
         <activity android:name=".PasswordSettingActivity" />
-        <activity android:name=".ForumActivity"></activity>
+        <activity android:name=".ForumActivity" />
+        <activity android:name=".BaseActivity"/>
+        <activity android:name=".DevicesActivity"></activity>
     </application>
 
 </manifest>

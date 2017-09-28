@@ -1,9 +1,8 @@
 package com.ixp.devicemonitor;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ForumActivity extends AppCompatActivity {
+public class ForumActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

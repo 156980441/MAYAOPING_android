@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.ixp.util.AdManager;
@@ -15,12 +15,12 @@ import com.ixp.util.DirectoryManager;
 import com.ixp.util.LocationUtil;
 import com.ixp.util.StartUpPageManager;
 
-public class MainActivity extends AppCompatActivity {
+public class LaunchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_launch);
         getSupportActionBar().hide();
 
         init();
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showLogin() {
         Intent intent = new Intent();
-        intent.setClass(MainActivity.this, LoginActivity.class);
+        intent.setClass(LaunchActivity.this, LoginActivity.class);
         startActivity(intent);
     }
 }

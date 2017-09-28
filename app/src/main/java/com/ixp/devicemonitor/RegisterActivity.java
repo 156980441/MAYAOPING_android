@@ -214,7 +214,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void registerSuccess() {
         Intent intent = new Intent();
-        intent.setClass(RegisterActivity.this, DeviceActivity.class);
+        intent.setClass(RegisterActivity.this, BaseActivity.class);
         startActivity(intent);
         finish();
     }

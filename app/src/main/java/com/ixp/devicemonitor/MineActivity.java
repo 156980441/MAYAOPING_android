@@ -2,7 +2,6 @@ package com.ixp.devicemonitor;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,25 +10,21 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class MineActivity extends AppCompatActivity {
+public class MineActivity extends BaseActivity {
 
     private static final String[] strs = new String[]{
             "添加设备", "Wifi 配置", "修改密码", "注销", "关于"
     };
 
-    private ListView lv;
     private BaseAdapter mListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mine);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        lv = (ListView) findViewById(R.id.list);
         mListAdapter = new MineListAdapter(getLayoutInflater());
-        lv.setAdapter(mListAdapter);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        this.mListView.setAdapter(mListAdapter);
+        this.mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
@@ -50,14 +45,6 @@ public class MineActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-
-    @Override
-    public void onBackPressed() {
-        Intent myintent = new Intent();
-        myintent.setClass(MineActivity.this, DeviceActivity.class);
-        MineActivity.this.startActivity(myintent);
-        MineActivity.this.finish();
     }
 
     private class MineListAdapter extends BaseAdapter {
