@@ -13,6 +13,7 @@
     <string name="prompt_username">用户名</string>
     <string name="prompt_password">密码</string>
     <string name="prompt_password_re">确认密码</string>
+    <string name="mail_label">邮箱</string>
     <string name="action_sign_in">登陆</string>
     <string name="action_register">注册</string>
     <string name="action_sign_in_short">登陆</string>

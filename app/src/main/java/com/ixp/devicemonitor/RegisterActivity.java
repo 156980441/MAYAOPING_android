@@ -36,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText mUsernameView;
     private EditText mPasswordView;
     private EditText mConfirmPasswordView;
+    private EditText mMailView;
 
     private View mProgressView;
     private View mRegisterView;
@@ -100,23 +101,29 @@ public class RegisterActivity extends AppCompatActivity {
         mUsernameView = (EditText)findViewById(R.id.register_name);
         mPasswordView = (EditText)findViewById(R.id.register_password);
         mConfirmPasswordView = (EditText)findViewById(R.id.register_password_again);
+        mMailView = (EditText)findViewById(R.id.mail);
 
         findViewById(R.id.register_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String username = mUsernameView.getText().toString();
                 String password = mPasswordView.getText().toString();
+                String mail = mMailView.getText().toString();
                 String confirmPassword = mConfirmPasswordView.getText().toString();
 
                 if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
                     Toast.makeText(RegisterActivity.this, "用户名或密码为空", Toast.LENGTH_LONG).show();
                     return;
                 }
+                if (TextUtils.isEmpty(mail)) {
+                    Toast.makeText(RegisterActivity.this, "邮箱为空", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 if (!password.equals(confirmPassword)) {
                     Toast.makeText(RegisterActivity.this, "密码不一致", Toast.LENGTH_LONG).show();
                     return;
                 }
-                register(username, password);
+                register(username, password, mail);
             }
         });
 
@@ -156,14 +163,14 @@ public class RegisterActivity extends AppCompatActivity {
             mRegisterView.setVisibility(show ? View.GONE : View.VISIBLE);
         }
     }
-    private String buildParams(String username, String password) {
-        return "{\"USER_NAME\":\"" + username + "\",\"PASSWORD\":\"" + password + "\"}";
+    private String buildParams(String username, String password, String mail) {
+        return "{\"USER_NAME\":\"" + username + "\",\"PASSWORD\":\"" + password + "\",\"MAIL\":\"" + mail + "\"}";
     }
 
-    private void register(String username, String password) {
+    private void register(String username, String password, String mail) {
         showProgress(true);
 
-        String postData = buildParams(username, password);
+        String postData = buildParams(username, password, mail);
         HttpUtil.post(Configs.ADD_USER_URL, postData, new HttpConnection.Callback() {
             @Override
             public void onSucess(final byte[] data, final int size) {

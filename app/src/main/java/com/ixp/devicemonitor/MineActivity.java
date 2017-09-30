@@ -2,6 +2,7 @@ package com.ixp.devicemonitor;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -10,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.ixp.util.Configs;
 
 public class MineActivity extends BaseActivity {
 
@@ -48,6 +51,7 @@ public class MineActivity extends BaseActivity {
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
+                                    Configs.userInfo.logout = 1;
                                     Intent myIntent = new Intent();
                                     myIntent.setClass(MineActivity.this, LoginActivity.class);
                                     MineActivity.this.startActivity(myIntent);

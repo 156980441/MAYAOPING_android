@@ -10,6 +10,8 @@ public class UserInfo {
     public String userNo;
     public String isAdmin;
     public String createDate;
+    public String mail;
+    public int logout;
 
     public static UserInfo createFromJson(String str) {
         try {
@@ -22,6 +24,7 @@ public class UserInfo {
             userInfo.userNo = obj.getString("userNo");
             userInfo.isAdmin = obj.getString("isAdmin");
             userInfo.createDate = obj.getString("createDate");
+            userInfo.mail = obj.getString("mail");
             return userInfo;
         } catch (Exception e) {
             e.printStackTrace();
@@ -37,6 +40,7 @@ public class UserInfo {
                 ", userNo='" + userNo + '\'' +
                 ", isAdmin='" + isAdmin + '\'' +
                 ", createDate='" + createDate + '\'' +
+                ", mail='" + mail + '\'' +
                 '}';
     }
 }

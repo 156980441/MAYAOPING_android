@@ -256,6 +256,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         if (statusCode == 200) {
                             UserInfo info = UserInfo.createFromJson(jsonStr);
+                            info.logout = 0;
                             if (Configs.DEBUG) {
                                 Log.d(TAG, info.toString());
                             }
