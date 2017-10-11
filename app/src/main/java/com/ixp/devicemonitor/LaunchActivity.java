@@ -51,7 +51,7 @@ public class LaunchActivity extends AppCompatActivity {
     }
 
     private void init() {
-        DirectoryManager.init(this.getApplicationContext());
+        DirectoryManager.init(this.getApplicationContext());//静态方法或者成员是属于类的，所以直接类+点的形式调用
         DataManager.init(this.getApplicationContext());
         LocationUtil.init(this.getApplicationContext());
         AdManager.init(this.getApplicationContext());
