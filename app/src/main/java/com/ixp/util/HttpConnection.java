@@ -16,13 +16,17 @@ import java.util.concurrent.Executors;
 
 public class HttpConnection {
 
+    private static final String TAG = "HttpConnection";
+    private static final int TIMEOUT = 5000;
+    private LinkedList<RequestData> mRequestQueue = new LinkedList<>();
+    private ExecutorService mService = Executors.newFixedThreadPool(2);
+
     public interface Callback{
 
         void onSucess(byte[] data, int size);
 
         void onFailed(int code);
     }
-
 
     private static class RequestData {
         String url;
@@ -165,11 +169,6 @@ public class HttpConnection {
             executeNext();
         }
     }
-
-    private static final String TAG = "HttpConnection";
-    private static final int TIMEOUT = 5000;
-    private LinkedList<RequestData> mRequestQueue = new LinkedList<>();
-    private ExecutorService mService = Executors.newFixedThreadPool(2);
 
     public void get(String url, Callback callback) {
         RequestData data = new RequestData(url, callback);
