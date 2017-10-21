@@ -18,6 +18,7 @@ public class DirectoryManager {
     }
 
     public static String getStorageDirectory() {
+        // 图片存放的标准目录
         File file = mContext.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
 
         if (!file.exists()) {

@@ -19,9 +19,13 @@ import com.ixp.util.HttpUtil;
 
 import org.json.JSONObject;
 
+// 设备列表界面
+
 public class DevicesActivity extends BaseActivity {
 
+    // 设置 list
     private BaseAdapter mListAdapter;
+    // Android 中处理点击事件的 OnClickListener 接口也是被定义在类 View 中的,为接口添加了个命名空间，明确了接口的所属，且免去了到处定义一堆.java文件
     private DeviceDataManager.OnDeviceListRefreshedListener mOnDeviceListRefreshListener = null;
 
     @Override
@@ -84,12 +88,14 @@ public class DevicesActivity extends BaseActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
+                            // 当我们需要 ListView 进行刷新的时候，我们需要调用 Adapter.notifyDataSetChanged() 来让界面刷新。
                             mListAdapter.notifyDataSetChanged();
                         }
                     });
                 }
             }
         };
+        // 监听数据变化，通知给 list，之后 list 更新数据
         DeviceDataManager.addOnDeviceListRefreshedListener(mOnDeviceListRefreshListener);
         DeviceDataManager.refreshDeviceList(false);
     }

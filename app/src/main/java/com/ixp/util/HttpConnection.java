@@ -21,6 +21,7 @@ public class HttpConnection {
     private LinkedList<RequestData> mRequestQueue = new LinkedList<>();
     private ExecutorService mService = Executors.newFixedThreadPool(2);
 
+    // 网络回到成功或者失败的回调
     public interface Callback{
 
         void onSucess(byte[] data, int size);

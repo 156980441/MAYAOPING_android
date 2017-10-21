@@ -34,7 +34,7 @@ public class DeviceDataManager {
     private static InfoRefreshedCallback mInfoHttpCallback = null;
 
     public static void init(Context context) {
-        mHandler = new MyHandler();
+        mHandler = new MyHandler();// 刷新数据
 
         mRefreshDeviceId = null;
         mRefreshDeviecSeq = -1;
@@ -98,7 +98,7 @@ public class DeviceDataManager {
 
     public static void refreshDeviceList(boolean forceRefresh) {
         if ((forceRefresh || !mRefreshSucc) && mListHttpCallback == null) {
-            mListHttpCallback = new ListRefreshCallback();
+            mListHttpCallback = new ListRefreshCallback();//网络监听
             HttpUtil.get(Configs.MACHINE_LIST_URL + Configs.userInfo.userNo, mListHttpCallback);
         }
         mHandler.sendEmptyMessageDelayed(0, DELAY_TIME);
