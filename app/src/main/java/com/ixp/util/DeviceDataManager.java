@@ -133,7 +133,7 @@ public class DeviceDataManager {
             JSONArray array = new JSONArray(string);
             for (int i = 0; i < array.length(); i++) {
                 DeviceInfo info = DeviceInfo.createFromJson(array.getString(i));
-                mDeviceList.add(info);
+                if (info != null) mDeviceList.add(info); // 防止 exception
             }
         } catch (Exception e) {
             e.printStackTrace();

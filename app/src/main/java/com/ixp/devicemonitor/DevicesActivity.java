@@ -118,8 +118,8 @@ public class DevicesActivity extends BaseActivity {
             View view = convertView;
             if (view == null)
                 view = mInflater.inflate(R.layout.list_item, null);
-            TextView textView = (TextView) view.findViewById(R.id.item_text);
 
+            TextView textView = (TextView) view.findViewById(R.id.item_text);
             textView.setText(DeviceDataManager.getDevices().get(position).name);
 
             return view;

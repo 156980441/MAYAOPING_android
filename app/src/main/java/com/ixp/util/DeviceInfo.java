@@ -24,7 +24,7 @@ public class DeviceInfo {
             info.seq = object.getInt("SEQ");
             info.name = object.getString("TITLE");
             info.deviceId = object.getString("ID");
-            info.temperature = Float.valueOf(object.getString("TEMPERATURE"));
+            info.temperature = Float.valueOf(object.getString("TEMPERATURE"));//如果s为null，则抛出一个NullPointerException
             info.tds = (int)(float)Float.valueOf(object.getString("TDS"));
             info.ph = Float.valueOf(object.getString("PH"));
             info.state = "1".equals(object.getString("STATE"));
