@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.device.lib.UDPHelper;
+import com.device.lib.WiFiTouch;
 import com.ixp.util.AdItem;
 import com.ixp.util.AdManager;
 import com.ixp.util.Configs;
@@ -26,6 +28,14 @@ public class BaseActivity extends AppCompatActivity {
      * Context.
      */
     protected Context mContext;
+    /**
+     * UDP控制器
+     */
+    protected UDPHelper udpHelper;
+    /***
+     * wifi控制器
+     */
+    protected WiFiTouch wifiTouch;
 
     private AdView mTopAdView;
     private AdView mBottomAdView;

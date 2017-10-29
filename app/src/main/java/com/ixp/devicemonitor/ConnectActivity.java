@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.device.lib.Callback;
+import com.google.gson.JsonObject;
 import com.ixp.util.StringUtils;
 
 import java.util.Timer;
@@ -143,31 +145,31 @@ public class ConnectActivity extends BaseActivity {
             public void run() {
                 super.run();
                 Log.i("bear", "[APStart] " + "ssid:" + ssid + ",password:" + password);
-//                udpHelper.APLink(ssid, password, new Callback<JsonObject>() {
-//                    @Override
-//                    public void onCompleted(Exception e, JsonObject jsonObject) {
-//                        Log.i("bear", "[ap]=" + jsonObject);
-//                        if (jsonObject != null) {
-//                            isReceiveLink = true;
-//                        }
-//                    }
-//                });
+                udpHelper.APLink(ssid, password, new Callback<JsonObject>() {
+                    @Override
+                    public void onCompleted(Exception e, JsonObject jsonObject) {
+                        Log.i("bear", "[ap]=" + jsonObject);
+                        if (jsonObject != null) {
+                            isReceiveLink = true;
+                        }
+                    }
+                });
             }
         }.start();
     }
 
     private void doSmartStart() {
-//        wifiTouch.start(ssid, password, mContext, 60);
-//        udpHelper.receiveSmartLink(new Callback<JsonObject>() {
-//            @Override
-//            public void onCompleted(Exception e, JsonObject jsonObject) {
-//                Log.i(TAG, "Configer " + jsonObject);
-//                //配网过程收到很多数据
-//                if (jsonObject != null) {
-//                    isReceiveLink = true;
-//                }
-//            }
-//        });
+        wifiTouch.start(ssid, password, mContext, 60);
+        udpHelper.receiveSmartLink(new Callback<JsonObject>() {
+            @Override
+            public void onCompleted(Exception e, JsonObject jsonObject) {
+                Log.i(TAG, "Configer " + jsonObject);
+                //配网过程收到很多数据
+                if (jsonObject != null) {
+                    isReceiveLink = true;
+                }
+            }
+        });
 
     }
 

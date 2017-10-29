@@ -32,5 +32,12 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    // AiCloud Android SDK
+    compile files('libs/javastruct-0.1.jar')
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.koushikdutta.async:androidasync:2.1.8'
+    compile 'com.koushikdutta.ion:ion:2.1.8'
+    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile files('libs/libAiCloud_v2.jar')
 }
