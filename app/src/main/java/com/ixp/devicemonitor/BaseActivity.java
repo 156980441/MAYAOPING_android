@@ -58,6 +58,8 @@ public class BaseActivity extends AppCompatActivity {
         mTopAdItems = AdManager.getTopAdList();
         mBottomAdItems = AdManager.getBottomList();
         mContext = getApplication();
+        wifiTouch = WiFiTouch.getInstance();
+        udpHelper = UDPHelper.getInstance();
 
         // 启用ActionBar图标导航功能
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
