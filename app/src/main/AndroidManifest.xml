@@ -94,7 +94,7 @@
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden|stateHidden" />
         <activity
             android:name=".PasswordSettingActivity"
-            android:label="@string/title_activity_pass" />
+            android:label="@string/title_activity_pass" /> <!--ActionBar的标题中的内容修改-->
         <activity android:name=".BaseActivity" />
         <activity android:name=".WifiSetting" />
         <activity android:name=".ConnectActivity"></activity>
