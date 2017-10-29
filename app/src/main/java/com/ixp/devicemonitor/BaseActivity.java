@@ -1,6 +1,7 @@
 package com.ixp.devicemonitor;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +21,11 @@ import com.ixp.util.LocationUtil;
 import java.util.ArrayList;
 
 public class BaseActivity extends AppCompatActivity {
+
+    /**
+     * Context.
+     */
+    protected Context mContext;
 
     private AdView mTopAdView;
     private AdView mBottomAdView;
@@ -41,8 +47,10 @@ public class BaseActivity extends AppCompatActivity {
 
         mTopAdItems = AdManager.getTopAdList();
         mBottomAdItems = AdManager.getBottomList();
+        mContext = getApplication();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // 启用ActionBar图标导航功能
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         initView();
 
@@ -136,6 +144,9 @@ public class BaseActivity extends AppCompatActivity {
         builder.create().show();
     }
 
+    // 当用户点击Action按钮的时候，系统会调用Activity的onOptionsItemSelected()方法，
+    // 通过方法传入的MenuItem参数，
+    // 我们可以调用它的getItemId()方法和menu资源中的id进行比较，从而辨别出用户点击的是哪一个Action按钮
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

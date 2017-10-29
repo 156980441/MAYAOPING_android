@@ -59,4 +59,5 @@
     <string name="configure_info">\t\t\t设备连接中\n请尽量不要移动手机</string>
     <string name="configure_error">\t\t\t\t设备连接失败\n返回检查WIFI名字和密码</string>
     <string name="configure_error2">\t\t\t\t设备连接失败\n返回检查WIFI名字和密码\n\t或者尝试AP配网模式?</string>
+    <string name="configure_ok">设备连接成功</string>
 </resources>

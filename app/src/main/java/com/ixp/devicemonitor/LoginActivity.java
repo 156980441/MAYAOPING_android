@@ -87,6 +87,8 @@ public class LoginActivity extends AppCompatActivity {
         tryAutoLogin();
     }
 
+    // 当Activity启动的时候，系统会调用Activity的onCreateOptionsMenu()方法来取出所有的Action按钮，
+    // 我们只需要在这个方法中去加载一个menu资源，并把所有的Action按钮都定义在资源文件里面就可以了。
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();

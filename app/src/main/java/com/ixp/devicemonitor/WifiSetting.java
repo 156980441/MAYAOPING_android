@@ -9,6 +9,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -46,6 +47,7 @@ public class WifiSetting extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wifi_setting);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mContext = getApplication();
         tvStatus = (TextView) findViewById(R.id.tv_status);
         wifiSsid = (EditText) findViewById(R.id.wifi_ssid);
@@ -162,5 +164,16 @@ public class WifiSetting extends AppCompatActivity {
             finish();
         }
 
+    }
+
+    // 返回上一页
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

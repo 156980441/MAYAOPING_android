@@ -5,36 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dip"
-        android:background="@color/colorPrimary">
-
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            android:src="@mipmap/back" />
-
-
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="连接中"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_20sp" />
-
-
-    </RelativeLayout>
-
     <LinearLayout
         android:id="@+id/ll_configure"
         android:layout_width="match_parent"
