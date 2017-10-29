@@ -3,4 +3,38 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="welcomeText">#4682B4</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="milk_white">#F5F5F5</color>
+    <color name="bg">#F0F0F0</color>
+    <color name="light_close">#F7F7F7</color>
+    <color name="register_hint_text_color">#AEAEAE</color>
+    <color name="textColor_gray">#cccccc</color>
+    <color name="tabHostBg">#F6F6F6</color>
+    <color name="normal_text_color">#424242</color>
+    <color name="black">#000000</color>
+    <color name="text_gray_light">#d0d0d0</color>
+    <color name="tabBg">#f9f9f9</color>
+    <color name="head">#808080</color>
+
+
+    <color name="login_btn_text_color">#0fc4d9</color>
+
+    <!--抽屉菜单图标的背景颜色-->
+    <color name="drawer_home_coclor">#00A8F1</color>
+    <color name="drawer_search_coclor">#ff2ec5f5</color>
+    <color name="drawer_setting_coclor">#ffec7530</color>
+    <color name="drawer_advice_coclor">#ff6fc624</color>
+    <color name="drawer_share_coclor">#fffecb2f</color>
+    <color name="drawer_about_coclor">#038ECE</color>
+    <color name="drawer_exit_coclor">#ff3bbfba</color>
+    <color name="drawer_edit_coclor">#ad4fe9</color>
+
+    <color name="red">#ffff0000</color>
+    <color name="green">#c000ff00</color>
+    <color name="blue">#c0267fea</color>
 </resources>

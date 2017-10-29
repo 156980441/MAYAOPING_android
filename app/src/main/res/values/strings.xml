@@ -49,4 +49,14 @@
     <string name="tabbar_devices">设备</string>
     <string name="tabbar_forum">论坛</string>
     <string name="tabbar_mine">我的</string>
+
+    <string name="input_wifi_ssid">当前 WI-FI </string>
+    <string name="input_wifi_pwd">WI-FI密码</string>
+    <string name="psw_digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+
+    <string name="error_ap">使用AP配网</string>
+    <string name="error_check">返回检查</string>
+    <string name="configure_info">\t\t\t设备连接中\n请尽量不要移动手机</string>
+    <string name="configure_error">\t\t\t\t设备连接失败\n返回检查WIFI名字和密码</string>
+    <string name="configure_error2">\t\t\t\t设备连接失败\n返回检查WIFI名字和密码\n\t或者尝试AP配网模式?</string>
 </resources>

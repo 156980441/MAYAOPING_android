@@ -37,7 +37,8 @@ public class MineActivity extends BaseActivity {
                     intent.setClass(MineActivity.this, DeviceManagerActivity.class);
                     startActivity(intent);
                 } else if (position == 1) {
-                    intent.setClass(MineActivity.this, MachineSettingActivity.class);
+//                    intent.setClass(MineActivity.this, MachineSettingActivity.class);
+                    intent.setClass(MineActivity.this, WifiSetting.class);
                     startActivity(intent);
                 } else if (position == 2) {
                     intent.setClass(MineActivity.this, PasswordSettingActivity.class);

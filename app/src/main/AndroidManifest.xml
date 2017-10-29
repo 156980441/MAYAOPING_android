@@ -48,6 +48,7 @@
         <activity android:name=".LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -66,8 +67,9 @@
         <activity
             android:name=".DeviceManagerActivity"
             android:label="@string/title_activity_device_manager" />
-        <activity android:name=".DevicesActivity"
-            android:label="@string/title_activity_device"/>
+        <activity
+            android:name=".DevicesActivity"
+            android:label="@string/title_activity_device" />
         <activity
             android:name=".ForumActivity"
             android:label="@string/title_activity_forum" />
@@ -76,11 +78,12 @@
             android:name=".MachineSettingActivity"
             android:label="设置设备参数"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden|stateHidden" />
-        <activity android:name=".PasswordSettingActivity"
-            android:label="@string/title_activity_pass"/>
-
+        <activity
+            android:name=".PasswordSettingActivity"
+            android:label="@string/title_activity_pass" />
         <activity android:name=".BaseActivity" />
-
+        <activity android:name=".WifiSetting" />
+        <activity android:name=".ConnectActivity"></activity>
     </application>
 
 </manifest>
