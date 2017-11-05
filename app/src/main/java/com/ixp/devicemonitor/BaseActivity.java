@@ -78,10 +78,19 @@ public class BaseActivity extends AppCompatActivity {
                     Intent myintent = new Intent();
                     // TODO Auto-generated method stub
                     if (checkedId == mDeviceBt.getId()) {
+//                        mDeviceBt.setChecked(true);
+//                        mForumBt.setChecked(false);
+//                        mMineBt.setChecked(false);
                         myintent.setClass(BaseActivity.this, DevicesActivity.class);
                     } else if (checkedId == mForumBt.getId()) {
+//                        mDeviceBt.setChecked(false);
+//                        mForumBt.setChecked(true);
+//                        mMineBt.setChecked(false);
                         myintent.setClass(BaseActivity.this, ForumActivity.class);
                     } else if (checkedId == mMineBt.getId()) {
+//                        mDeviceBt.setChecked(false);
+//                        mForumBt.setChecked(false);
+//                        mMineBt.setChecked(true);
                         myintent.setClass(BaseActivity.this, MineActivity.class);
                     }
                     BaseActivity.this.startActivity(myintent);

@@ -35,11 +35,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/task"
+            android:drawableTop="@drawable/rb_device_selector"
             android:gravity="center"
             android:paddingBottom="5dp"
             android:paddingTop="8dp"
             android:text="@string/tabbar_devices"
+            android:textColor="@color/rb_text_selector"
             android:textSize="12sp" />
 
         <RadioButton
@@ -53,6 +54,7 @@
             android:paddingBottom="5dp"
             android:paddingTop="8dp"
             android:text="@string/tabbar_forum"
+            android:textColor="@color/rb_text_selector"
             android:textSize="12sp" />
 
         <RadioButton
@@ -61,11 +63,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@drawable/track"
+            android:drawableTop="@drawable/rb_user_selector"
             android:gravity="center"
             android:paddingBottom="5dp"
             android:paddingTop="8dp"
             android:text="@string/tabbar_mine"
+            android:textColor="@color/rb_text_selector"
             android:textSize="12sp" />
     </RadioGroup>
 
