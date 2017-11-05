@@ -83,6 +83,7 @@ public class BaseActivity extends AppCompatActivity {
                         myintent.setClass(BaseActivity.this, MineActivity.class);
                     }
                     BaseActivity.this.startActivity(myintent);
+                    overridePendingTransition(0, 0); // 去掉跳转动画
                     BaseActivity.this.finish();
                 }
             };
