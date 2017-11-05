@@ -11,7 +11,7 @@ public class UserInfo {
     public String isAdmin;
     public String createDate;
     public String mail;
-    public int logout;
+    public int logout;// 用户注销标记
 
     public static UserInfo createFromJson(String str) {
         try {
