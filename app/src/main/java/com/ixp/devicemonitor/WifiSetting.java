@@ -3,6 +3,7 @@ package com.ixp.devicemonitor;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AlertDialog;
@@ -48,6 +49,7 @@ public class WifiSetting extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wifi_setting);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//强制竖屏
         mContext = getApplication();
         tvStatus = (TextView) findViewById(R.id.tv_status);
         wifiSsid = (EditText) findViewById(R.id.wifi_ssid);

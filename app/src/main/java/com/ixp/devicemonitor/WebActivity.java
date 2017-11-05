@@ -1,8 +1,9 @@
 package com.ixp.devicemonitor;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.webkit.WebChromeClient;
@@ -25,7 +26,7 @@ public class WebActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         initWebView();
         setContentView(mWebView);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//强制竖屏
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
